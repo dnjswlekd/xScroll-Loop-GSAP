@@ -1,0 +1,260 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital@1&family=Noto+Sans+KR&family=Public+Sans&display=swap");
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+address,
+em,
+i {
+  font-style: normal;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* 영어 폰트 */
+.en {
+  font-family: "Public Sans", sans-serif;
+}
+
+.en2 {
+  font-family: "Cormorant Infant", serif;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.wrap {
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+  color: #fff;
+}
+.wrap .visual {
+  height: 250vh;
+  position: relative;
+}
+.wrap .visual .img-box {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  perspective: 1500px;
+  text-align: center;
+}
+.wrap .visual .img-box img {
+  width: 100%;
+}
+.wrap .visual .title-box {
+  width: 100%;
+  position: absolute;
+  top: 12%;
+  left: 0;
+  line-height: 1.4;
+}
+.wrap .visual .title-box .for {
+  font-size: 50px;
+  margin-left: 100px;
+}
+.wrap .visual .title-box .text-loop ul {
+  display: flex;
+  white-space: nowrap;
+  font-size: 145px;
+  letter-spacing: -2px;
+}
+.wrap .visual .title-box .text-loop ul li {
+  text-transform: capitalize;
+  animation: text_loop 6s linear infinite;
+  padding: 0 30px;
+}
+.wrap .visual .title-box .date {
+  text-align: right;
+  font-size: 48px;
+  margin-right: 100px;
+}
+.wrap .visual .title-box .en2 {
+  font-size: 64px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.wrap .visual .desc-box {
+  width: 30%;
+  position: absolute;
+  top: 40%;
+  right: 5%;
+}
+.wrap .visual .desc-box ul .title {
+  display: block;
+}
+.wrap .visual .desc-box ul .title h2 {
+  padding-bottom: 4px;
+  text-transform: capitalize;
+  display: block;
+  font-size: 30px;
+  font-weight: normal;
+  border-bottom: 1px solid #fff;
+}
+.wrap .visual .desc-box ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 11px;
+}
+.wrap .visual .desc-box ul li h3 {
+  font-weight: normal;
+  font-size: 13px;
+  width: 130px;
+}
+.wrap .visual .desc-box ul li .en2 {
+  font-size: 22px;
+}
+.wrap .visual .desc-box ul .mode .btn-box a {
+  display: inline-block;
+  padding: 0 42px;
+  margin-right: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  transition: 0.35s;
+}
+.wrap .visual .desc-box ul .mode .btn-box a:hover, .wrap .visual .desc-box ul .mode .btn-box a:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.wrap .visual .text-loop2 {
+  position: absolute;
+  left: -10%;
+  bottom: 300px;
+}
+.wrap .visual .text-loop2 ul {
+  display: flex;
+  white-space: nowrap;
+  font-size: 70px;
+  letter-spacing: -2px;
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  position: absolute;
+  padding: 10px 0;
+}
+.wrap .visual .text-loop2 ul.a {
+  transform: rotate(7deg);
+  background-color: rgba(255, 255, 255, 0);
+  color: #fff;
+  border-block: 1px solid #fff;
+}
+.wrap .visual .text-loop2 ul.a li {
+  animation: text_loop 6s linear infinite;
+}
+.wrap .visual .text-loop2 ul.b {
+  transform: rotate(-7deg);
+  top: -135px;
+}
+.wrap .visual .text-loop2 ul.b li {
+  animation: text_loop2 6s linear infinite;
+}
+.wrap .visual .text-loop2 ul li {
+  padding: 0 20px;
+}
+
+@keyframes text_loop {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes text_loop2 {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
